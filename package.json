@@ -11,19 +11,3 @@
     "node-fetch": "^3.3.2"
   }
 }
-        ],
-        max_tokens: 300
-      })
-    });
-
-    const data = await openaiRes.json();
-    const reply = data?.choices?.[0]?.message?.content || "Sorry, I couldn't produce a reply.";
-    return res.json({ reply });
-  } catch (err) {
-    console.error("Server error:", err);
-    return res.status(500).json({ reply: "Server error connecting to OpenAI." });
-  }
-});
-
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`SAROJ bridge listening on port ${PORT}`));
