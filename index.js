@@ -16,7 +16,7 @@ if (!GEMINI_API_KEY) {
 }
 
 // Gemini API endpoint (you can change the model if needed)
-const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${GEMINI_API_KEY}`;
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent?key=${GEMINI_API_KEY}`;
 
 // 🧠 Main endpoint that Roblox calls
 app.post("/generate", async (req, res) => {
